@@ -1,0 +1,131 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.App {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #ff6363;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border: 2px solid #ff6363;
+  background-color: #ffefef;
+}
+
+textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 0;
+  border: 2px solid #ff6363;
+  border-radius: 8px;
+  resize: vertical;
+  font-size: 16px;
+}
+
+button {
+  background-color: #ff6363;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #e04f4f;
+}
+
+.comic-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 2px solid #ff6363;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+}
+
+.comic-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.comic-modal-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-content: center;
+}
+
+.comic-panel {
+  border: 2px solid #ff6363;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.comic-panel img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #ff6363;
+  display: block;
+  margin-bottom: -2px;
+}
+
+.close-modal-button {
+  background-color: #ff6363;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.close-modal-button:hover {
+  background-color: #e04f4f;
+}
+
+@media only screen and (max-width: 600px) {
+  .comic-modal {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .comic-modal-content {
+    grid-template-columns: 1fr;
+  }
+}
